@@ -681,6 +681,7 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.Sprite.Acts.SetAngle,
 		C3.Plugins.Multiplayer.Exps.LagCompensateAngle,
 		C3.Plugins.Sprite.Cnds.IsOverlapping,
+		C3.Plugins.System.Cnds.Every,
 		C3.Plugins.Sprite.Acts.SubInstanceVar,
 		C3.Plugins.Sprite.Acts.AddInstanceVar,
 		C3.Plugins.Multiplayer.Cnds.OnPeerMessage,
@@ -707,6 +708,9 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.Mouse.Cnds.OnClick,
 		C3.Plugins.TextBox.Acts.SetBlur,
 		C3.Plugins.Button.Acts.SetBlur,
+		C3.Plugins.Keyboard.Cnds.OnKeyCode,
+		C3.Plugins.System.Cnds.CompareVar,
+		C3.Behaviors.EightDir.Acts.SetSpeed,
 		C3.Plugins.TextBox.Acts.SetFocus,
 		C3.Plugins.Multiplayer.Cnds.IsSupported,
 		C3.Plugins.Text.Acts.SetFontColor,
@@ -993,7 +997,7 @@ const n1 = p._GetNode(1);
 const v2 = p._GetNode(2).GetVar();
 return () => f0(n1.ExpInstVar(), v2.GetValue());
 },
-() => 3,
+() => 0.1,
 () => 100,
 () => "AddToKills",
 () => "chat",
@@ -1027,6 +1031,9 @@ const n2 = p._GetNode(2);
 const n3 = p._GetNode(3);
 return () => C3.distanceTo(n0.ExpObject(), n1.ExpObject(), n2.ExpInstVar(), n3.ExpInstVar());
 },
+() => 235,
+() => "Sunion_Admin",
+() => 450,
 () => "Multiplayer not supported",
 () => 255
 	];
